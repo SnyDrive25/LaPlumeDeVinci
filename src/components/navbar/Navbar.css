@@ -1,0 +1,203 @@
+#Navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100vw;
+    height: 10vh;
+    text-align: center;
+    display: inline-flex;
+    text-align: center;
+    z-index: 4;
+    opacity: 1;
+    background-color: transparent;
+    backdrop-filter: blur(2em);
+    border-bottom: .1em solid var(--light);
+    transition: all.4s;
+}
+
+.titles,
+.titles2 {
+    height: 100%;
+    min-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.titles2 {
+    display: flex;
+}
+
+.titles a,
+.titles2 a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    line-height: 8vh;
+    color: var(--light);
+    font-weight: 400;
+    border-top: 0em solid transparent;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    text-transform: uppercase;
+}
+
+.titles a {
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+#Navbar img {
+    float: left;
+    margin-top: 0;
+}
+
+#logo {
+    transform: scale(1.3);
+    height: 10vh;
+    width: 10vh;
+}
+
+#logo:hover {
+    cursor: pointer;
+}
+
+@media only screen and (max-width:1300px) {
+
+    #Navbar {
+        display: flex;
+    }
+
+    .notel {
+        display: none;
+    }
+
+    #logo {
+        margin-left: 9px;
+    }
+
+    #hamburger,
+    #cross {
+        filter: invert(1);
+        pointer-events: all !important;
+        user-select: all !important;
+        position: relative;
+        float: right !important;
+        margin: 1.5vh;
+        height: 7vh !important;
+        width: 7vh !important;
+        background-color: transparent;
+        border: none;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    #hamburger {
+        background-size: 100%;
+        background-image: url("../../images/hamburger.png");
+    }
+
+    #cross {
+        display: none;
+        background-size: 50%;
+        background-image: url("../../images/cross.png");
+    }
+
+    #hamburger:hover,
+    #cross:hover {
+        cursor: pointer;
+    }
+
+    #scrolled {
+        display: none;
+        position: absolute;
+        top: 12vh;
+        height: 54vh;
+        width: 100%;
+        text-align: center;
+        background-color: transparent;
+        align-items: center;
+        vertical-align: middle;
+    }
+
+    #scrolled a {
+        text-decoration: none;
+        color: var(--light);
+        line-height: 300%;
+        font-size: 1.4em;
+    }
+
+    .titles {
+        width: 100%;
+    }
+    
+    .titles2 {
+        width: 0%;
+    }
+    
+    .titles a {
+        display: none;
+    }
+
+    .titles2 {
+        padding-right: 0;
+        display: grid;
+    }
+
+    .titles2 a {
+        float: right;
+        text-align: right;
+        margin-right: 9px;
+    }
+    
+}
+
+@media only screen and (min-width:1300px) {
+
+    #Navbar {
+        display: inline-flex;
+    }
+
+    #logo {
+        margin-left: 25px;
+    }
+
+    #hamburger,
+    #cross,
+    #scrolled {
+        display: none;
+    }
+
+    .titles a,
+    .titles2 a {
+        font-size: 1.2em;
+        padding-left: .7em;
+        padding-right: .7em;
+    }
+
+    .titles a {
+        float: right;
+    }
+
+    .titles2 a {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .titles a:hover,
+    .titles2 a:hover {
+        cursor: pointer;
+        border-top: .5em solid var(--light);
+        padding-top: .05em;
+    }
+    
+    .titles {
+        width: 70%;
+    }
+    
+    .titles2 {
+        width: 30%;
+        border-left: .1em solid var(--light);
+    }
+
+}

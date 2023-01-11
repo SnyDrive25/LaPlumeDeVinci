@@ -1,0 +1,118 @@
+.div-admin {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    border: .1em solid var(--light);
+    height: 100%;
+    text-align: center;
+}
+
+@media only screen and (min-width: 700px) {
+
+    .div-admin {
+        width: 400px !important;
+        transform: scale(1.2);
+    }
+
+    .no-borders {
+        border: none !important;
+        box-shadow: 0 0 1em black;
+    }
+    
+}
+
+@media only screen and (max-width: 700px) {
+
+    .div-admin {
+        width: 95% !important;
+        font-size: larger;
+    }
+    
+}
+
+.div-admin input,
+.div-admin textarea {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 9px;
+    padding-top: 14px;
+    background-color: transparent;
+    border: .1em solid var(--light);
+}
+
+textarea {
+    resize: none;
+    height: 200px !important;
+    min-height: fit-content;
+}
+
+.div-admin input:active,
+.div-admin input:target,
+.div-admin input:focus,
+.div-admin textarea:active,
+.div-admin textarea:target,
+.div-admin textarea:focus {
+    outline: none;
+}
+
+label {
+    pointer-events: none;
+    position:absolute;
+    padding-left: .4em;
+    padding-right: .4em;
+    font-size: .9em;
+    left: .5em;
+    top: -0.6em;
+    transition: 0.2s;
+    transition-timing-function: ease;
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    background-color:var(--black);
+    user-select: none;
+}
+
+.div-admin p {
+    width: 80%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    margin: 25px;
+    text-align: center;
+}
+
+.title-admin {
+    font-size: 1.4em;
+}
+
+.btn-admin {
+    font-size: 1em;
+    margin-bottom: 25px;
+    position: relative;
+    background-color: var(--black);
+    width: calc(100% + 18px);
+    border: .1em solid var(--light);
+    color: var(--light);
+    padding: 9px;
+}
+
+.btn-admin:hover {
+    cursor: pointer;
+    background-color: var(--light);
+    color: var(--black);
+}
+
+.btns-admin {
+    display: grid !important;
+}
+
+.btns-admin a {
+    text-decoration: none;
+    padding: 0;
+    padding-top: 9px;
+    padding-bottom: 9px;
+}
+
+#message2 {
+    margin-bottom: 75px;
+}

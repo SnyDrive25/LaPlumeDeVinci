@@ -1,0 +1,54 @@
+:root {
+  --black: #232426;
+  --grey: #D9D9D9;
+  --dark-grey: rgb(82, 82, 84);
+  --blue: #0f97f3;
+  --orange: #ff9c02;
+  --pink: #cf1052;
+  --light: #F2F1DF;
+  --main: #8C8A80;
+}
+
+::-moz-selection {
+  background: var(--light);
+  color: var(--black);
+}
+
+::selection {
+  background: var(--light);
+  color: var(--black);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Times New Roman', serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden !important;
+  scroll-behavior: smooth;
+  background: var(--black);
+}
+
+html {
+  overflow-x: hidden !important;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+a,
+p,
+h1,
+h2,
+span,
+button,
+input,
+select,
+textarea,
+text {
+  font-family: 'Times New Roman', serif;
+  color: var(--light);
+}

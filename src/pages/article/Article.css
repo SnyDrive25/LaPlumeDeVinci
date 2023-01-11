@@ -1,0 +1,128 @@
+.div-img {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+    background-color: var(--light);
+}
+
+.actu-img {
+    width: 100%;
+    margin: 0;
+    margin-top: -17vh;
+    max-width: 2200px;
+    height: auto;
+    filter: brightness(.4);
+}
+
+@media only screen and (min-width:1400px) {
+
+    .div-img {
+        height: 40vh;
+        max-height: 600px;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        text-align: center;
+        background-color: var(--black);
+    }
+
+    .actu-img {
+        width: 100%;
+        margin: 0;
+        margin-top: -17vh;
+        max-width: 2200px;
+        height: auto;
+    }
+
+}
+
+@media only screen and (max-width:1400px) {
+
+    .div-img {
+        height: 35vh;
+        max-height: none;
+        width: 100vw;
+        margin: 0;
+        margin-top: 10vh;
+        padding: 0;
+        overflow: hidden;
+        text-align: center !important;
+        background-color: var(--black);
+        border-bottom: .1em solid var(--light);
+        display: flex;
+        justify-content: center;
+    }
+
+    .actu-img {
+        height: 100%;
+        width: auto;
+        margin: 0;
+        max-width: none;
+        height: auto;
+    }
+
+}
+
+.share {
+    position: fixed;
+    z-index: 2;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    bottom: 7vw;
+    right: 7vw;
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    background-color: var(--light);
+    vertical-align: middle;
+    border: none;
+    box-shadow: 0 0 1em black;
+    transition: all .4s;
+}
+
+.share:hover {
+    cursor: pointer;
+    filter: hue-rotate(-90deg) saturate(2);
+    transform: scale(1.1) rotate(360deg);
+}
+
+.share p {
+    padding: 0;
+    height: 60%;
+    width: 60%;
+    margin-top: 20%;
+    margin-left: 17%;
+}
+
+.share p img {
+    opacity: .9;
+    height: 100%;
+    width: 100%;
+}
+
+#share-message {
+    display: none;
+    opacity: 0;
+    vertical-align: middle;
+    position: fixed;
+    top: 40vh;
+    left: 0;
+    height: fit-content !important;
+    width: 100vw;
+    background-color: var(--light);
+    box-shadow: 0 0 1em black;
+    z-index: 4;
+    text-align: center;
+    transition: all .2s;
+}
+
+#share-message p {
+    text-align: center;
+    color: var(--black);
+    font-size: 3vh;
+    width: 100%;
+}

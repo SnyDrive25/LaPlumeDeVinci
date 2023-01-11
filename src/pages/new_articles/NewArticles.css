@@ -1,0 +1,114 @@
+.div-aaa {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    border: .1em solid var(--light);
+    height: 95%;
+    min-height: fit-content;
+    text-align: center;
+}
+
+@media only screen and (min-width: 1100px) {
+
+    .div-aaa {
+        width: 900px !important;
+        transform: scale(1.2);
+    }
+
+}
+
+@media only screen and (max-width: 1100px) {
+
+    .div-aaa {
+        width: 95% !important;
+        font-size: larger;
+    }
+}
+
+.div-aaa input,
+.div-aaa textarea,
+.div-aaa select,
+option {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 9px;
+    padding-top: 14px;
+    background-color: transparent;
+    border: .1em solid var(--light);
+}
+
+option {
+    appearance: none !important;
+    opacity: 1 !important;
+    background-color: var(--black) !important;
+    color: var(--light) !important;
+    padding: 9px !important;
+}
+
+.div-aaa select {
+    margin: 0;
+    width: calc(100% + 21px) !important;
+}
+
+textarea {
+    resize: none;
+    height: 200px !important;
+    min-height: fit-content;
+}
+
+.div-aaa input:active,
+.div-aaa input:target,
+.div-aaa input:focus,
+.div-aaa select:active,
+.div-aaa select:target,
+.div-aaa select:focus,
+.div-aaa textarea:active,
+.div-aaa textarea:target,
+.div-aaa textarea:focus {
+    outline: none;
+}
+
+label {
+    pointer-events: none;
+    position:absolute;
+    padding-left: .4em;
+    padding-right: .4em;
+    font-size: .9em;
+    left: .5em;
+    top: -0.6em;
+    transition: 0.2s;
+    transition-timing-function: ease;
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    background-color:var(--black);
+    user-select: none;
+}
+
+.div-aaa p {
+    width: 80%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    margin: 25px;
+    text-align: center;
+}
+
+.title-admin {
+    font-size: 1.4em;
+}
+
+.btn-admin {
+    position: relative;
+    background-color: var(--black);
+    width: calc(100% + 18px);
+    border: .1em solid var(--light);
+    color: var(--light);
+    padding: 9px;
+}
+
+.btn-admin:hover {
+    cursor: pointer;
+    background-color: var(--light);
+    color: var(--black);
+}

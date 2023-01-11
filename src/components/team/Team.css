@@ -1,0 +1,112 @@
+#Team {
+    height: fit-content;
+    min-height: 50vh;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 100%;
+}
+
+.team-content {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#Team h1 {
+    text-align: center;
+    width: fit-content;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+    color: var(--light);
+}
+
+.team-content img {
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 100%;
+    transform: scale(.9);
+    transition: all .7s;
+}
+
+.team-content p {
+    width: 220px;
+    height: fit-content;
+    border-radius: 20px;
+    background-color: rgb(252, 222, 222, .1);
+    backdrop-filter: blur(1em);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    font-size: 1.4em;
+    box-shadow: 0 0 .5em var(--black);
+    transition: all .4s ease-out;
+}
+
+@media only screen and (min-width:1400px) {
+
+    #Team {
+        background-image: url("../../images/team.jpg");
+        background-color: rgb(0, 0, 0, .7);
+        background-attachment: fixed;
+        background-blend-mode: multiply;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .team-content p {
+        width: 259px;
+    }
+
+    .team-content img {
+        width: 259px;
+        height: 259px;
+    }
+
+    .team-content p:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+        box-shadow: 0 0 1.5em var(--black);
+    }
+
+    .team-content p:hover img {
+        border-radius: 20px 20px 0 0;
+        transform: scale(1);
+    }
+
+}
+
+@media only screen and (max-width:1400px) {
+    
+    #Team {
+        background-color: var(--black);
+    }
+
+    .team-content p {
+        width: 88vw;
+    }
+
+    .team-content img {
+        width: 88vw;
+        height: 88vw;
+    }
+    
+}
+
+.team-content p span {
+    padding: 9px;
+}
+
+.team-content p span:last-child {
+    font-style: italic;
+    font-size: smaller;
+}
