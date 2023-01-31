@@ -5,7 +5,7 @@ import sha256 from 'crypto-js/sha256';
 function Connected() {
 
     setTimeout(() => {
-        if(sessionStorage.getItem('bsfur') !== sha256("D4ctyL3o!").toString()) {
+        if (sessionStorage.getItem('bsfur') !== sha256("D4ctyL3o!").toString()) {
             window.location.href = "../admin";
         }
     }, 10);
@@ -15,7 +15,7 @@ function Connected() {
     document.title = user + " - La Plume De Vinci";
 
     var Airtable = require('airtable');
-    var base = new Airtable({apiKey: process.env.REACT_APP_API}).base('appWPDVfFKbFOF1eA');
+    var base = new Airtable({ apiKey: process.env.REACT_APP_API }).base('appWPDVfFKbFOF1eA');
 
     function createAdmin() {
         var email = document.getElementById("email").value;
@@ -24,25 +24,25 @@ function Connected() {
 
         base('admins').create([
             {
-              "fields": {
-                "email": email,
-                "pseudo": pseudo1,
-                "mdp": sha256(mdp1).toString()
-              }
+                "fields": {
+                    "email": email,
+                    "pseudo": pseudo1,
+                    "mdp": sha256(mdp1).toString()
+                }
             }
-          ], function(err) {
+        ], function (err) {
             if (err) {
-              console.error(err);
-              return;
+                console.error(err);
+                return;
             }
-          });
+        });
 
         document.getElementById("message1").textContent = "Le compte a bien été créé !"
 
         document.getElementById("email").value = "";
         document.getElementById("pseudo1").value = "";
         document.getElementById("mdp1").value = "";
-        
+
         document.getElementById("btn1").innerHTML = "<p><button class='btn-admin' onclick='window.open(`../admin/login`, `_self`)'>Accéder au portail</button></p>"
     }
 
@@ -86,6 +86,14 @@ function Connected() {
                     </button>
                     <button className='btn-admin' onClick={() => window.location.href = "../admin/new_ecrits"}>
                         Créer des écrits
+                    </button>
+                </p>
+                <p className='btns-admin'>
+                    <button className='btn-admin' onClick={() => window.open("https://airtable.com/appWPDVfFKbFOF1eA")}>
+                        Lien Base de données
+                    </button>
+                    <button className='btn-admin' onClick={() => window.open("https://forms.office.com/Pages/DesignPageV2.aspx?subpage=design&token=d7678e0893ed4be1868add1e20614783&id=rrzuiObW9067pEw09MLV4AuxHtDL2JROudgg7C4Hs7ZUQU5TQzNBUkk5TVFOMEIySEpGUUdGU01SRy4u&analysis=true")}>
+                        Lien admin du Forms
                     </button>
                 </p>
                 <p className='btns-admin'>
