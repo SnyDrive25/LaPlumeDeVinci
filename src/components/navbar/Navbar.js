@@ -34,14 +34,16 @@ function Navbar() {
             document.getElementById("Navbar").style.backgroundColor = "transparent";
         }
         var currentScrollPos = window.pageYOffset;
-        if (prevScrollpos > currentScrollPos) {
-            document.getElementById("Navbar").style.top = "0";
-            document.getElementById("Navbar").style.opacity = "1";
-        } else {
-            document.getElementById("Navbar").style.top = "-11vh";
-            document.getElementById("Navbar").style.opacity = "0";
+        if (currentScrollPos > 100) {
+            if (prevScrollpos > currentScrollPos) {
+                document.getElementById("Navbar").style.top = "0";
+                document.getElementById("Navbar").style.opacity = "1";
+            } else {
+                document.getElementById("Navbar").style.top = "-11vh";
+                document.getElementById("Navbar").style.opacity = "0";
+            }
+            prevScrollpos = currentScrollPos;
         }
-        prevScrollpos = currentScrollPos;
     }
 
     return (
